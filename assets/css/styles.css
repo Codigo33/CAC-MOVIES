@@ -1,0 +1,704 @@
+/*========== CUSTOM =========*/
+:root {
+    --white: #fff;
+    --black: #000;
+    --primary: #9f3647;
+    --secondary: #9f3648;
+    --bg-color: #181419;
+    --bg-second: rgb(42, 42, 42);
+    --bg-red: #9f3648;
+    --light-shadow: 0 5px 15px rgba(255, 253, 253, 0.3);
+}
+
+/*========== Globales =========*/
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+html {
+    /* font-size: 62.5%; */
+    overflow-x: hidden;
+    color: var(--white);
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+hr {
+    color: var(--primary);
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+button {
+    border-style: none;
+    background: none;
+    cursor: pointer;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+/*========= Reusables ===========*/
+.btn {
+    background-color: var(--primary);
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    border: none;
+}
+
+.grid {
+    display: grid;
+}
+
+.nav-link:hover {
+    color: var(--black);
+}
+
+.scroll-link:hover {
+    color: var(--black);
+}
+
+.mb-2 {
+    margin-top: 2.5rem;
+}
+
+.bg-body {
+    background: linear-gradient(to right top, #24242473, #24242473), url('../img/bg-register.jpg') no-repeat center / cover;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*========= HEADER ===========*/
+.header {
+    background: linear-gradient(to right top, #0000008a, #0000008a), url('../img/banner-bg.jpg') no-repeat center / cover;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+.header__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.btn-registrar {
+    /* margin-top: 2rem; */
+    width: fit-content;
+    transition: transform .3s, box-shadow .3s;
+
+    &:hover {
+        transform: scale(0.9);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+}
+
+
+/*========= NAVBAR ===========*/
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: var(--primary);
+    padding: 1rem 1.5rem;
+    z-index: 2;
+}
+
+.nav__container i,
+a,
+span {
+    color: var(--white);
+    transition: all .3s ease;
+}
+
+.nav__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.2rem;
+}
+
+.nav-links__container {
+    height: 0;
+    overflow: hidden;
+    transition: all .3s ease;
+}
+
+.nav__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 0;
+}
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: var(--primary);
+    box-shadow: var(--light-shadow);
+}
+
+
+/*========= MENU ===========*/
+.nav-toggle {
+    width: 1.75rem;
+    height: 1.75rem;
+    padding: 5px;
+    position: relative;
+    border: 1px solid var(--white);
+    border-radius: 5px;
+    background: transparent;
+    cursor: pointer;
+}
+
+
+.span {
+    background: var(--white);
+    width: 70%;
+    height: 2px;
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.7s, width 0.5s;
+}
+
+.l1 {
+    transform: translate(-50%, -8px);
+}
+
+.l3 {
+    transform: translate(-50%, 6px);
+}
+
+
+.activo .l1 {
+    transform: translate(-50%, -50%)rotate(45deg);
+}
+
+.activo .l3 {
+    transform: translate(-50%, -50%)rotate(-45deg);
+}
+
+.activo .l2 {
+    width: 0;
+}
+
+
+/*========= BUSCADOR ===========*/
+.buscar {
+    margin: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__buscar {
+    width: 90%;
+}
+
+.heading__buscador {
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 4rem 0;
+    font-weight: bold;
+}
+
+.form__buscar {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.buscador {
+    width: 100%;
+    height: 40px;
+    padding: 1rem;
+    border-radius: 50px;
+}
+
+.btn-submit {
+    background-color: var(--primary);
+    border: 2px solid var(--white);
+    color: var(--white);
+    border-radius: 50px;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform .3s, box-shadow .3s;
+}
+
+.btn-submit:hover {
+    transform: translateX(5px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+
+/*========= TENDENCIAS ===========*/
+.tendencias {
+    /* margin: 0 auto; */
+    /* width: 90%; */
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.heading__tendencias {
+    margin-bottom: 3rem;
+}
+
+.container__movies {
+    width: 80%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.movies {
+    transition: all 0.5s ease;
+    margin-bottom: 3.5rem;
+    border-radius: 10px;
+
+    &:hover {
+        box-shadow: 0 0 30px var(--secondary);
+        transform: scale(.9);
+    }
+}
+
+.movie {
+    position: relative;
+    transition: all 0.5s ease;
+
+    &:hover {
+        .movie__title {
+            opacity: 1;
+        }
+    }
+}
+
+.movie__title {
+    position: absolute;
+    text-align: center;
+    font-size: 1.5rem;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    font-weight: bold;
+    opacity: 0;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.1rem;
+    transition: all .5s ease-in-out;
+}
+
+.img__tendencias {
+    border-radius: 10px;
+
+    &:hover {
+        filter: blur(5px);
+    }
+}
+
+
+.container__btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.btn-prev,
+.btn-next {
+    color: var(--white);
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        background-color: var(--black);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+}
+
+/*========= ACLAMADAS ===========*/
+
+/*========= SCROLL HORIZONTAL ===========*/
+.aclamadas {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.heading__aclamadas {
+    margin-bottom: 3rem;
+}
+
+.container__aclamadas {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px 0px 40px 0px;
+    cursor: pointer;
+    margin-bottom: 5rem;
+}
+
+.movies__aclamadas {
+    width: 150px;
+    min-width: 150px;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+/* Añade estilos para la barra de desplazamiento */
+.container__aclamadas::-webkit-scrollbar {
+    height: 10px;
+}
+
+.container__aclamadas::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    border-radius: 10px;
+}
+
+/*========= FOOTER ===========*/
+.footer {
+    background-color: var(--primary);
+    padding: 2rem 1rem;
+}
+
+.footer__container {
+    display: grid;
+    gap: 2rem;
+}
+
+.footer__links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer__group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    transition: all .3s ease;
+    visibility: hidden;
+}
+
+.btn-up:hover {
+    filter: invert(100%);
+    transform: translateY(-10px);
+}
+
+.show-link {
+    visibility: visible;
+}
+
+
+/*========= LOGIN DESIGN ===========*/
+.container__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+.container__login {
+    background-color: var(--bg-second);
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    gap: 2rem;
+    margin-top: 3.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+form {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    input:not(.check, .btn, .btn-registrar, .buscador, .btn-submit),
+    select {
+        width: 100%;
+        height: 40px;
+        padding: 0px 20px;
+        font-size: 1.2rem;
+        border-radius: 20px;
+        border: 2px solid #9f3647;
+        background-color: #333333;
+        outline: none;
+        color: white;
+
+        
+    }
+}
+.form__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.btn-form {
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        background-color: var(--black);
+        color: var(--white);
+    }
+}
+.form__input {
+    width: 100%;
+}
+
+.form__input-terminos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    transition: all .3s ease-in-out;
+
+    & input,
+    label {
+        cursor: pointer;
+    }
+
+    &:hover {
+        color: var(--black);
+    }
+}
+
+.form__input-help {
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+
+    &:hover a {
+        color: var(--black);
+    }
+}
+
+/*========= SIGNUP DESIGN ===========*/
+.container__sign {
+    background-color: var(--bg-second);
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    gap: 2rem;
+    margin-top: 3.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+
+
+
+/*========= RESPONSIVE DESIGN ===========*/
+@media screen and (min-width: 500px) {
+
+    /*========= BUSCADOR ===========*/
+    .form__buscar {
+        justify-content: center;
+    }
+
+    .buscador {
+        width: 60%;
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    .btn-submit {
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    /*========= FORMULARIO ===========*/
+    .container__header {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    /*========= NAVBAR ===========*/
+    .nav__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-links__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        overflow: visible;
+    }
+    .nav-toggle {
+        display: none;
+    }
+    .nav__links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 0;
+
+    }
+    .nav__links li:last-child {
+        background-color: var(--black);
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: all .4s ease-in-out;
+
+        &:hover {
+            background-color: var(--white);
+
+            a {
+                color: var(--black);
+            }
+        }
+    }
+    /*========= BUSCADOR ===========*/
+    .buscador {
+        width: 500px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+    .btn-submit {
+        height: 50px;
+        font-size: 1.25rem;
+    }
+    /*========= FORMULARIO ===========*/
+    .container__login {
+        margin-top: 0;
+        padding: 40px 0 5rem 0;
+    }
+    .form__input {
+        width: 80%;
+    }
+    .container__header {
+        width: 60%;
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+
+    /*========= BUSCADOR ===========*/
+    .buscador {
+        width: 500px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    .btn-submit {
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    /*========= FORMULARIO ===========*/
+    .container__header {
+        width: 50%;
+    }
+}
+
+
+@media screen and (min-width: 1440px) {
+    /*========= FORMULARIO ===========*/
+    /* .form__input {
+        width: 80%;
+    } */
+    .container__header {
+        width: 30%;
+    }
+    .container__login {
+        margin-top: 0;
+        padding: 40px 0 7rem 0;
+    }
+}

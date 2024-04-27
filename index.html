@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAC-MOVIES</title>
+    <!-- REMIX ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&amp;display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <nav class="navbar" id="navbar">
+            <div class="nav__container">
+                <div class="nav__header">
+                    <a href="/" class="logo">
+                        <i class="ri-film-line"></i>
+                        <span>CAC-MOVIES</span>
+                    </a>
+
+                    <button class="nav-toggle">
+                        <span class="span l1"></span>
+                        <span class="span l2"></span>
+                        <span class="span l3"></span>
+                    </button>
+                </div>
+                <div class="nav-links__container">
+                    <ul class="nav__links">
+                        <li>
+                            <a href="#tendencias" class="scroll-link">Tendencias</a>
+                        </li>
+                        <li>
+                            <a href="#aclamadas" class="scroll-link">Aclamadas</a>
+                        </li>
+                        <li>
+                            <a href="signup.html" class="nav-link">Registrarse</a>
+                        </li>
+                        <li>
+                            <a href="login.html" class="nav-link">Iniciar Sesión</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="header__body" data-aos="zoom-in">
+            <h1>
+                Películas y series Ilimitadas
+                <br>
+                en un solo lugar
+            </h1>
+            <h2>
+                Disfrutá donde quieras.
+                <br>
+                Cancelá en cualquier momento.
+            </h2>
+            <a href="#" class="btn btn-registrar">Registrate</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="buscar" id="buscar" data-aos="fade-up">
+            <div class="container__buscar">
+                <h2 class="heading__buscador">¿Qué estas buscando para ver?</h2>
+                <form class="form__buscar">
+                    <input class="buscador" id="buscar" type="text" placeholder="Buscar..." name="buscar">
+                    <input class="btn-submit" type="submit" value="Buscar">
+                </form>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="tendencias" class="tendencias" data-aos="fade-up">
+
+            <h3 class="heading__tendencias">Las Tendencias de Hoy</h3>
+
+            <div class="container__movies grid"></div>
+
+            <div class="container__btns">
+                <button class="btn btn-prev">Anterior</button>
+                <button class="btn btn-next">Siguiente</button>
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section id="aclamadas" class="aclamadas" data-aos="fade-right">
+
+            <h3 class="heading__aclamadas">Las más Aclamadas</h3>
+
+            <div class="container__aclamadas"></div>
+
+        </section>
+    </main>
+
+    <footer id="footer" class="footer grid">
+        <div class="footer__container">
+            <div class="footer__links-container" data-aos="fade-right">
+                <h4 class="footer__heading">Mapa del sitio</h4>
+                <ul class="footer__links">
+                    <li>
+                        <a href="#tendencias" class="scroll-link">Tendencias</a>
+                    </li>
+                    <li>
+                        <a href="#aclamadas" class="scroll-link">Aclamadas</a>
+                    </li>
+                    <li>
+                        <a href="signup.html" class="nav-link">Registrarse</a>
+                    </li>
+                    <li>
+                        <a href="login.html" class="nav-link">Iniciar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__group">
+                <a href="https://www.codigo33.com.ar/" class="scroll-link">
+                    &#169; Codigo33.
+                </a>
+            </div>
+        </div>
+
+
+        <div class="btn-up">
+            <a href="#">
+                <img src="assets/img/flecha-hacia-arriba.png" alt="btn-up">
+            </a>
+        </div>
+    </footer>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- VANILLA JS -->
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>

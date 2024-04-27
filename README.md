@@ -1,4 +1,3 @@
 # CAC-MOVIES
 
-Codo a Codo Project
-HTML, CSS, JS
+Codo a Codo Project with HTML, CSS, JS

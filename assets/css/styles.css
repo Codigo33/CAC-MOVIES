@@ -9,6 +9,25 @@
     --bg-red: #9f3648;
     --light-shadow: 0 5px 15px rgba(255, 253, 253, 0.3);
 }
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(23, 23, 23);
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #9f3647;
+    border-radius: 5px;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background:#9f3647;
+}
 
 /*========== Globales =========*/
 *,

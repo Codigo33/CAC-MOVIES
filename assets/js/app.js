@@ -187,6 +187,7 @@ function fixedNav() {
 
 function smoothScroll() {
     const navbar = document.getElementById('navbar');
+    const navToggle = document.querySelector('.nav-toggle');
     const linksContainer = document.querySelector(".nav-links__container");
     const scrollLinks = document.querySelectorAll(".scroll-link");
 
@@ -216,6 +217,7 @@ function smoothScroll() {
 
             // Close navbar when clicks a link
             linksContainer.style.height = 0;
+            navToggle.classList.remove('activo');
         });
     });
 }

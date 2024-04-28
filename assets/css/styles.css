@@ -9,24 +9,25 @@
     --bg-red: #9f3648;
     --light-shadow: 0 5px 15px rgba(255, 253, 253, 0.3);
 }
+
 ::-webkit-scrollbar {
     width: 10px;
 }
-  
+
 /* Track */
 ::-webkit-scrollbar-track {
     background: rgb(23, 23, 23);
 }
-   
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: #9f3647;
     border-radius: 5px;
 }
-  
+
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background:#9f3647;
+    background: #9f3647;
 }
 
 /*========== Globales =========*/
@@ -119,6 +120,15 @@ li {
 
 .mb-2 {
     margin-top: 2.5rem;
+}
+
+.hover {
+    transition: all .3s ease;
+
+    &:hover {
+        filter: invert(30%);
+        transform: translateY(-5px);
+    }
 }
 
 .bg-body {
@@ -500,6 +510,7 @@ span {
     align-items: center;
     width: 90%;
 }
+
 .container__login {
     background-color: var(--bg-second);
     width: 90%;
@@ -513,6 +524,7 @@ span {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
+
 form {
     width: 100%;
     height: 100%;
@@ -529,10 +541,9 @@ form {
         background-color: #333333;
         outline: none;
         color: white;
-
-        
     }
 }
+
 .form__container {
     display: flex;
     flex-direction: column;
@@ -540,6 +551,7 @@ form {
     align-items: center;
     gap: 1rem;
 }
+
 .btn-form {
     cursor: pointer;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
@@ -550,6 +562,7 @@ form {
         color: var(--white);
     }
 }
+
 .form__input {
     width: 100%;
 }
@@ -596,8 +609,6 @@ form {
 }
 
 
-
-
 /*========= RESPONSIVE DESIGN ===========*/
 @media screen and (min-width: 500px) {
 
@@ -632,6 +643,7 @@ form {
         justify-content: space-between;
         align-items: center;
     }
+
     .nav-links__container {
         display: flex;
         flex-direction: row;
@@ -639,9 +651,11 @@ form {
         align-items: center;
         overflow: visible;
     }
+
     .nav-toggle {
         display: none;
     }
+
     .nav__links {
         display: flex;
         flex-direction: row;
@@ -651,6 +665,7 @@ form {
         margin-top: 0;
 
     }
+
     .nav__links li:last-child {
         background-color: var(--black);
         padding: 5px 10px;
@@ -665,24 +680,29 @@ form {
             }
         }
     }
+
     /*========= BUSCADOR ===========*/
     .buscador {
         width: 500px;
         height: 50px;
         font-size: 1.25rem;
     }
+
     .btn-submit {
         height: 50px;
         font-size: 1.25rem;
     }
+
     /*========= FORMULARIO ===========*/
     .container__login {
         margin-top: 0;
         padding: 40px 0 5rem 0;
     }
+
     .form__input {
         width: 80%;
     }
+
     .container__header {
         width: 60%;
     }
@@ -697,10 +717,12 @@ form {
         height: 50px;
         font-size: 1.5rem;
     }
+
     .btn-submit {
         height: 50px;
         font-size: 1.5rem;
     }
+
     /*========= FORMULARIO ===========*/
     .container__header {
         width: 50%;
@@ -709,6 +731,7 @@ form {
 
 
 @media screen and (min-width: 1440px) {
+
     /*========= FORMULARIO ===========*/
     /* .form__input {
         width: 80%;
@@ -716,6 +739,7 @@ form {
     .container__header {
         width: 30%;
     }
+
     .container__login {
         margin-top: 0;
         padding: 40px 0 7rem 0;

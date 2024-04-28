@@ -1,0 +1,176 @@
+.movie__detail {
+    background: linear-gradient(to right top, #6d6969a7, #6d6969a7), url('../img/mario-bg.jpg') no-repeat center / cover;
+    width: 100%;
+    /* height: 80vh; */
+    margin-top: 3.5rem;
+    padding-top: 50px;
+    height: initial;
+}
+
+.movie__container {
+    margin: 0 auto;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.movie__image {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.movie__description {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    & h1 {
+        font-size: 1.5rem;
+    }
+
+    & h2 {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    & h3 {
+        font-size: 1.2rem;
+    }
+}
+
+.movie__credits {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+/*========= TRAILER ===========*/
+.trailer {
+    width: 95%;
+    padding: 5rem 0;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.container__trailer {
+    width: 100%;
+
+    & h2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+    }
+
+    & iframe {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+.container__links-movie {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & a {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}
+
+.movie__info {
+    width: 100%;
+
+    & thead {
+        font-size: 1.5rem;
+    }
+
+    & table {
+        width: 100%;
+    }
+
+    & td {
+        padding: 1rem 0;
+    }
+}
+
+/*========= RESPONSIVE DESIGN ===========*/
+@media screen and (min-width: 992px) {
+    .movie__detail {
+        height: 75vh;
+    }
+    .movie__container {
+        width: 90%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        column-gap: 60px;
+    }
+
+    .movie__image {
+        width: 300px;
+        height: 450px;
+    }
+
+    .movie__description h1 {
+        font-size: 2.2rem;
+    }
+
+    .movie__credits {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /*========= TRAILER ===========*/
+    .trailer {
+        width: 85%;
+        flex-direction: row;
+        align-items: normal;
+        gap: 5rem;
+    }
+
+    .container__links-movie {
+        width: 75%;
+        justify-content: space-between;
+    }
+    
+    .movie__links {
+        order: 2;
+    }
+}
+
+
+@media screen and (min-width: 1440px) {
+    
+    .trailer {
+        width: 85%;
+        flex-direction: row;
+        align-items: normal;
+        gap: 7rem;
+    }
+
+    .container__trailer {
+        width: 80%;
+    }
+
+    .container__links-movie {
+        width: 75%;
+        justify-content: space-between;
+    }
+}

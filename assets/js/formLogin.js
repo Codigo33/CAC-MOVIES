@@ -18,6 +18,13 @@ function validarFormLogin() {
     loginForm.addEventListener("submit", e => {
         e.preventDefault()
 
+        if (e.target.id === "email" && !validarEmail(e.target.value.trim()) {
+            emailError.textContent = "El email no es válido"
+            setTimeout(() => {
+                emailError.textContent = '';
+            }, 3000);
+        }
+
         if (email === "") {
             emailError.textContent = "El email es obligatorio"
             setTimeout(() => {
@@ -32,4 +39,11 @@ function validarFormLogin() {
             }, 3000);
         }
     })
+}
+
+function validarEmail(email) {
+    // Expresion Regular
+    const regex = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+    const resultado = regex.test(email);
+    return resultado;
 }

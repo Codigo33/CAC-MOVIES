@@ -18,7 +18,7 @@ function validarFormLogin() {
     loginForm.addEventListener("submit", e => {
         e.preventDefault()
 
-        if (e.target.id === "email" && !validarEmail(e.target.value.trim()) {
+        if (!validarEmail(email)) {
             emailError.textContent = "El email no es válido"
             setTimeout(() => {
                 emailError.textContent = '';

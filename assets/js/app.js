@@ -10,6 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
     fixedNav();
     // 
     smoothScroll();
+    // Validar form login
+    validarFormLogin();
+    // Validar form Registro
+    // validarFormRegistro();
 });
 
 const API_SERVER = 'https://api.themoviedb.org/3';
@@ -187,7 +191,7 @@ function fixedNav() {
 
 function smoothScroll() {
     const navbar = document.getElementById('navbar');
-    const navToggle = document.querySelector('.nav-toggle');
+    const navToggle = document.querySelector('.nav-toggle')
     const linksContainer = document.querySelector(".nav-links__container");
     const scrollLinks = document.querySelectorAll(".scroll-link");
 
